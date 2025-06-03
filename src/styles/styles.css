@@ -1,0 +1,222 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fc;
+  color: #222;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Container */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+
+
+/* Header */
+.header-section {
+  background: linear-gradient(90deg, #0d6efd 0%, #6f42c1 100%);
+  color: white;
+  padding: 4rem 0 5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  border-radius: 0 0 50% 50% / 20% 20% 80% 80%;
+}
+
+.header-section h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.header-section p {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+/* Main content */
+.main-content {
+  flex-grow: 1;
+  margin-bottom: 4rem;
+}
+
+.upload-section h2 {
+  text-align: center;
+  margin-bottom: 1.8rem;
+  color: #0d6efd;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+/* Upload form */
+.upload-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.drop-area {
+  border: 3px dashed #0d6efd;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  background-color: white;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.drop-area.dragover {
+  background-color: #e9f0ff;
+  border-color: #084cd0;
+}
+
+.drop-area p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+.drop-area input[type="file"] {
+  display: none;
+}
+
+.btn-upload {
+  display: inline-block;
+  padding: 0.65rem 1.5rem;
+  background-color: #0d6efd;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.btn-upload:hover {
+  background-color: #084cd0;
+}
+
+/* Preview image */
+.preview-img {
+  margin-top: 1rem;
+  max-height: 180px;
+  overflow: hidden;
+}
+
+.preview-img img {
+  max-width: 100%;
+  max-height: 180px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgb(13 110 253 / 0.3);
+}
+
+/* Button primary */
+.btn-primary {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  padding: 0.9rem 0;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #084cd0;
+}
+
+/* Result container */
+.result-container {
+  max-width: 600px;
+  margin: 2rem auto 0;
+  text-align: center;
+  min-height: 160px;
+}
+
+.waiting img {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  color: #d6336c;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.result {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #000000;
+  text-align: left; /* pastikan teks result juga rata kiri */
+}
+
+.result-title {
+  font-weight: 700;
+  color: #2c3e50; /* warna sub judul, bisa diganti sesuai tema */
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  font-size: 1.1rem;
+}
+
+
+/* Footer */
+.footer {
+  background-color: #222;
+  color: #eee;
+  padding: 2rem 0 1rem;
+}
+
+.footer-content hr {
+  border: 1px solid #444;
+  margin-bottom: 1rem;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+.footer-links a {
+  color: #eee;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #0d6efd;
+}
+
+
+/* Responsive */
+@media (max-width: 600px) {
+  .upload-form {
+    max-width: 100%;
+  }
+
+  .header-section h1 {
+    font-size: 2rem;
+  }
+}
