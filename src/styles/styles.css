@@ -176,6 +176,126 @@ body {
   font-size: 1.1rem;
 }
 
+/* src/styles/styles.css */
+
+/* Styling untuk section history */
+.history-section {
+    padding: 2rem 0;
+}
+
+/* Styling untuk container tabel */
+.history-container {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 1.5rem;
+    overflow-x: auto; /* Agar tabel bisa discroll jika terlalu lebar */
+}
+
+/* Styling untuk tabel secara keseluruhan */
+#predictionsTable {
+    width: 100%;
+    border-collapse: collapse; /* Menghilangkan spasi antar border sel */
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+/* Styling untuk header tabel */
+#predictionsTable thead th {
+    background-color: #007bff; /* Warna biru primer */
+    color: #ffffff;
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 2px solid #0056b3; /* Border lebih gelap */
+    font-weight: 600;
+}
+
+/* Styling untuk baris ganjil/genap (zebra-striping) */
+#predictionsTable tbody tr:nth-child(even) {
+    background-color: #f8f9fa; /* Warna abu-abu terang */
+}
+
+/* Styling untuk setiap sel data */
+#predictionsTable tbody td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #dee2e6; /* Border abu-abu muda */
+    vertical-align: top; /* Agar konten rata atas */
+}
+
+/* Hover effect untuk baris */
+#predictionsTable tbody tr:hover {
+    background-color: #e2f2ff; /* Warna biru sangat terang saat dihover */
+    cursor: pointer;
+}
+
+/* Styling untuk kolom Result (optional, bisa disesuaikan) */
+#predictionsTable tbody td:nth-child(3) { /* Kolom ketiga adalah Result */
+    font-weight: bold;
+}
+
+/* Styling untuk pesan loading dan error */
+.loading {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2rem;
+    color: #007bff;
+}
+
+.error-message {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.1rem;
+    color: #dc3545; /* Merah untuk error */
+}
+
+.waiting {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.1rem;
+    color: #6c757d; /* Abu-abu untuk pesan menunggu */
+}
+
+/* Responsive adjustments (bisa tambahkan di responsive.css atau di sini) */
+@media (max-width: 768px) {
+    #predictionsTable thead {
+        display: none; /* Sembunyikan header tabel pada layar kecil */
+    }
+
+    #predictionsTable, #predictionsTable tbody, #predictionsTable tr, #predictionsTable td {
+        display: block; /* Buat elemen tabel berperilaku seperti block */
+        width: 100%;
+    }
+
+    #predictionsTable tr {
+        margin-bottom: 15px;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    #predictionsTable td {
+        text-align: right;
+        padding-left: 50%; /* Ruang untuk label */
+        position: relative;
+        border-bottom: none; /* Hapus border antar sel di mode mobile */
+    }
+
+    #predictionsTable td::before {
+        content: attr(data-label); /* Tampilkan label dari data-label attribute */
+        position: absolute;
+        left: 15px;
+        width: calc(50% - 30px); /* Lebar label */
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        color: #555;
+    }
+}
+
 
 /* Footer */
 .footer {
